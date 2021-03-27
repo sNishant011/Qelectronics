@@ -106,7 +106,9 @@ $text-color: #005dff;
       h1 {
         font-family: $josefin;
         font-size: clamp(18px, 2rem, 2.5rem);
-
+        @include mobile(){
+          font-size: clamp(18px, 1.7rem, 1.7rem);
+        }
       }
       h3 {
         font-family: $josefin;
@@ -116,11 +118,16 @@ $text-color: #005dff;
         font-family: $jost;
         font-size: 1rem;
         @include mobile() {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
         }
       }
-
+      #phonecall{
+        transform:translate(20px,20px);
+        opacity:0;
+        transition: all 0.5s ease;
+      }
       a {
+        margin-left: 5%;
         padding: 0.5rem 1.5rem 0.5rem 1.5rem;
         background-color: $nav-color;
         transform: translateY(50px) !important;
@@ -134,7 +141,11 @@ $text-color: #005dff;
           text-decoration: none;
           transition: 0.3s ease;
           box-shadow: 5px 5px 10px $nav-color, -5px -5px 10px $text-color;
-
+          #phonecall{
+            transform:translate(0);
+            opacity:1;
+            transition: all 0.5s ease;
+          }
         }
       }
       .card-footer{
@@ -147,3 +158,4 @@ $text-color: #005dff;
     }
   }
 }
+

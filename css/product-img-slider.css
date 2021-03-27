@@ -100,6 +100,12 @@
   font-size: clamp(18px, 2rem, 2.5rem);
 }
 
+@media (max-width: 600px) {
+  .product-details .product-grid .product-info h1 {
+    font-size: clamp(18px, 1.7rem, 1.7rem);
+  }
+}
+
 .product-details .product-grid .product-info h3 {
   font-family: "Josefin Sans", sans-serif;
   font-size: clamp(18px, 1.2rem, 1.5rem);
@@ -112,11 +118,20 @@
 
 @media (max-width: 600px) {
   .product-details .product-grid .product-info p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
+.product-details .product-grid .product-info #phonecall {
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 .product-details .product-grid .product-info a {
+  margin-left: 5%;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   background-color: #1890ff;
   -webkit-transform: translateY(50px) !important;
@@ -138,6 +153,14 @@
   transition: 0.3s ease;
   -webkit-box-shadow: 5px 5px 10px #1890ff, -5px -5px 10px #005dff;
           box-shadow: 5px 5px 10px #1890ff, -5px -5px 10px #005dff;
+}
+
+.product-details .product-grid .product-info a:hover #phonecall {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .product-details .product-grid .product-info .card-footer {
