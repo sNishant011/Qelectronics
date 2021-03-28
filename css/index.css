@@ -365,6 +365,13 @@ for swiper
   text-align: center;
   padding: 2rem;
   background-color: #005dff;
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+@media (max-width: 600px) {
+  .returnpolicy {
+    padding: 1rem;
+  }
 }
 
 .returnpolicy h3 {

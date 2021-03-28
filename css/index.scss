@@ -306,6 +306,10 @@ for swiper
   text-align: center;
   padding: 2rem;
   background-color: #005dff;
+  font-family: $josefin !important;
+  @include mobile(){
+    padding: 1rem;
+  }
   h3{
     font-family: $josefin;
     color: #fff;
