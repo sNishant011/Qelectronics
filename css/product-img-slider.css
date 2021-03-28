@@ -130,12 +130,20 @@
   transition: all 0.5s ease;
 }
 
+@media (max-width: 800px) {
+  .product-details .product-grid .product-info #phonecall {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+  }
+}
+
 .product-details .product-grid .product-info a {
-  margin-left: 5%;
+  display: block;
+  width: 100%;
+  text-align: center;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   background-color: #1890ff;
-  -webkit-transform: translateY(50px) !important;
-          transform: translateY(50px) !important;
   font-family: "Jost", sans-serif;
   color: #fff;
   font-size: clamp(15px, 1.1rem, 1.5rem);
@@ -169,5 +177,114 @@
   outline: none;
   border: 0px !important;
   padding: 0px !important;
+}
+
+.additional-details-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.3rem;
+  font-size: clamp(15px, 1.1rem, 1.2rem) !important;
+}
+
+.additional-details-grid li {
+  text-align: left;
+}
+
+.reviews {
+  padding: 2rem;
+  margin: 0.5rem;
+}
+
+.reviews p {
+  padding: 0.5rem !important;
+}
+
+@media (max-width: 600px) {
+  .reviews {
+    padding: 0.5rem;
+    margin: 0;
+  }
+}
+
+form {
+  background-image: -webkit-gradient(linear, left top, right top, from(#4facfe), to(#00f2fe));
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  padding: 2rem;
+  grid-gap: 0;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0px 1.4px -71px rgba(0, 0, 0, 0.022), 0 0px 3.4px -71px rgba(0, 0, 0, 0.032), 0 0px 6.4px -71px rgba(0, 0, 0, 0.04), 0 0px 11.4px -71px rgba(0, 0, 0, 0.048), 0 0px 21.3px -71px rgba(0, 0, 0, 0.058), 0 0px 51px -71px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0px 1.4px -71px rgba(0, 0, 0, 0.022), 0 0px 3.4px -71px rgba(0, 0, 0, 0.032), 0 0px 6.4px -71px rgba(0, 0, 0, 0.04), 0 0px 11.4px -71px rgba(0, 0, 0, 0.048), 0 0px 21.3px -71px rgba(0, 0, 0, 0.058), 0 0px 51px -71px rgba(0, 0, 0, 0.08);
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 0.8rem;
+    padding-top: 1.5rem;
+  }
+}
+
+form label {
+  padding-top: 1rem;
+  padding-left: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  form label {
+    padding-top: 0.8rem;
+  }
+}
+
+form legend {
+  margin: 0 !important;
+}
+
+form input {
+  width: 100%;
+  outline: none;
+  border: 0px;
+  padding: 0.5rem;
+  padding-left: 1.5rem;
+  border-radius: 50px;
+  font-family: "Jost", sans-serif !important;
+}
+
+form textarea {
+  outline: none;
+  padding: 0.5rem;
+  border: 0px;
+  padding-left: 1.5rem;
+  font-family: "Jost", sans-serif !important;
+  letter-spacing: 0.1rem;
+  border-radius: 8px;
+}
+
+form button {
+  color: #fff !important;
+  border-radius: 50px !important;
+  background-color: #747474 !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em;
+  -webkit-transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important;
+}
+
+@media (max-width: 600px) {
+  form button {
+    background-color: #005dff !important;
+    margin-top: 0.5rem;
+  }
+}
+
+form button:hover {
+  background-color: #005dff !important;
+  -webkit-transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important;
 }
 /*# sourceMappingURL=product-img-slider.css.map */

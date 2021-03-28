@@ -34,7 +34,7 @@ $text-color: #005dff;
   display: none;
 }
 body {
-  background-image: url("../img/background.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolour-4116932_1280.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -93,16 +93,7 @@ body {
 
       background-color: $text-color;
 
-      #light {
-        transform: translateX(30%);
-      }
-      #dark1 {
-        transform: translateX(50%);
-        opacity: 0;
-      }
-      #dark2 {
-        transform: translateX(0%);
-      }
+
     }
     @include mobile() {
       transform: translateX(-50%) !important;
@@ -121,16 +112,53 @@ svg {
   #dark1,
   #dark2 {
     transition: all 1s ease;
+
   }
+  
   #lightGroup {
     fill: $light-color;
 
-    #dark2 {
-      transform: translateX(-100%);
-    }
   }
 }
+#light{
+  animation:light 1s linear 1s infinite alternate;
 
+}
+#dark1{
+  animation:dark1 1s linear 1s infinite alternate;
+
+}
+#dark1{
+  animation:dark2 1s linear 1s infinite alternate;
+
+}
+@keyframes light{
+  0%{
+
+  }
+  100%{
+    transform: translateX(30%);
+
+  }
+}
+@keyframes dark1{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+@keyframes dark2{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
 /*
 for swiper 
 */
@@ -277,13 +305,19 @@ for swiper
   justify-content: center;
   text-align: center;
   padding: 2rem;
+  background-color: #005dff;
   h3{
     font-family: $josefin;
+    color: #fff;
   }
   p{
     font-family: $jost;
     font-weight: 600;
     letter-spacing: 0.1rem;
+    color: #fff;
+  }
+  a{
+    color: #006d;
   }
 }
 .copyright{
